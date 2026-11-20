@@ -64,5 +64,54 @@
     "expected": {
       "includes": "海星 更正"
     }
+  },
+  {
+    "path": "/finance/PR-6/receipts",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "path": [
+        0,
+        "receipt"
+      ],
+      "value": "F61"
+    }
+  },
+  {
+    "path": "/finance/PR-9/receipts",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "path": [],
+      "value": []
+    }
+  },
+  {
+    "path": "/finance/PR-9/receipts",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "path": [
+        0,
+        "state"
+      ],
+      "value": "accepted"
+    }
+  },
+  {
+    "path": "/finance/PR-9/receipts",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "path": [
+        1,
+        "state"
+      ],
+      "value": "reversed"
+    }
   }
 ]

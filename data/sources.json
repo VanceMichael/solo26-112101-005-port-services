@@ -40,6 +40,43 @@
           "Content-Disposition": "attachment; filename=\"SV-63-r2.csv\""
         },
         "base64": "ZG9jdW1lbnQscmV2aXNpb24sY2FsbCx2ZXNzZWwsbGluZSxzZXJ2aWNlLHN0YXJ0LGVuZCxhbW91bnQsc3BsaXQKU1YtNjMsMixCLTE5LFNFQS00MDIsTTEs5ouW6L2uLDIwLDIyLDI1MCwK"
+      },
+      "GET /finance/PR-6/receipts": {
+        "data": []
+      },
+      "GET /finance/PR-9/receipts": {
+        "data": []
+      },
+      "GET /finance/PR-4/receipts": {
+        "data": []
+      },
+      "POST /finance/PR-6/claims": {
+        "status": 202,
+        "data": {
+          "queued": true,
+          "queue": "M6-1"
+        }
+      },
+      "POST /finance/PR-9/claims": {
+        "status": 202,
+        "data": {
+          "queued": true,
+          "queue": "M9-1"
+        }
+      },
+      "POST /finance/PR-4/claims": {
+        "status": 202,
+        "data": {
+          "queued": true,
+          "queue": "M4-1"
+        }
+      },
+      "POST /finance/PR-9/reverse": {
+        "status": 202,
+        "data": {
+          "queued": true,
+          "queue": "M9-R1"
+        }
       }
     },
     "corrected": {
@@ -70,6 +107,49 @@
               "Content-Disposition": "attachment; filename=\"SV-19-r2.csv\""
             },
             "base64": "ZG9jdW1lbnQscmV2aXNpb24sY2FsbCx2ZXNzZWwsbGluZSxzZXJ2aWNlLHN0YXJ0LGVuZCxhbW91bnQsc3BsaXQKU1YtMTksMixCLTA5LFNFQS0yMDEsTDEs5bK455S1LDE4LDIyLDQyMCwxOC0yMDoyMjB8MjAtMjI6MjAwClNWLTE5LDIsQi0wOSxTRUEtMjAxLEwyLOS+m+awtCwyMSwyMywxNTAsCg=="
+          }
+        ]
+      },
+      "GET /finance/PR-6/receipts": {
+        "data": [
+          {
+            "claimId": "SV-19/1/L1/18-20",
+            "state": "accepted",
+            "amount": 230,
+            "receipt": "F61"
+          }
+        ]
+      },
+      "GET /finance/PR-9/receipts": {
+        "sequence": [
+          {
+            "data": []
+          },
+          {
+            "data": [
+              {
+                "claimId": "SV-19/1/L1/20-22",
+                "state": "accepted",
+                "amount": 220,
+                "receipt": "F95"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "claimId": "SV-19/1/L1/20-22",
+                "state": "accepted",
+                "amount": 220,
+                "receipt": "F95"
+              },
+              {
+                "claimId": "SV-19/1/L1/20-22",
+                "state": "reversed",
+                "amount": 220,
+                "receipt": "F96"
+              }
+            ]
           }
         ]
       }

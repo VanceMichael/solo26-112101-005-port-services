@@ -11,3 +11,7 @@
 `data/sources.json` 保存原始报文及站点页面。连续响应由来源按同一进程内的观察次数提供。阶段从 `initial` 启动，本地演练人员可用 `POST /scenario/阶段名` 切换，未覆盖的路由延用初始响应。切换不清空来源的请求记录。重开服务会复位。
 
 执行 `npm test` 核对来源契约。本机浏览器依赖由 Playwright 1.56.1 提供，可在首次准备时执行 `npx playwright install chromium`。容器方式可先执行 `docker build -t port-services-sources .`，再执行 `docker run --rm port-services-sources`。镜像准备完成后的验证不需要外网。
+
+## 项目交付回执
+
+财务收件台 `/finance/项目号/receipts` 是独立来源。请求 `POST /finance/项目号/claims` 带上 `claimId`、`document`、`revision`、`line`、`segment` 和 `amount`。单行分段时，以原单、修订、行号和半开时间段定位对应原始明细。受理的行会出现在回执，提交响应仅表示队列收到。冲回请求 `POST /finance/项目号/reverse` 指明 `claimId`。只有 `reversed` 的回执确认金额已经从该项目当前账上冲回。
