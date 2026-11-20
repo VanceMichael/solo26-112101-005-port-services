@@ -1,0 +1,68 @@
+[
+  {
+    "path": "/case/19",
+    "stage": "initial",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "includes": "B-08"
+    }
+  },
+  {
+    "path": "/exports/V31",
+    "stage": "initial",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "hex": "646f63756d656e742c7265766973696f6e2c63616c6c2c76657373656c2c6c696e652c736572766963652c73746172742c656e642c616d6f756e742c73706c69740a53562d31392c312c422d30382c5345412d3230312c4c312ce5b2b8e794b52c31382c32322c3435302c31382d32303a3233307c32302d32323a3232300a53562d31392c312c422d30382c5345412d3230312c4c322ce4be9be6b0b42c32312c32332c3136302c0a"
+    }
+  },
+  {
+    "path": "/west/north/2",
+    "stage": "initial",
+    "method": "GET",
+    "status": 503,
+    "expected": {
+      "path": [
+        "message"
+      ],
+      "value": "续页准备中"
+    }
+  },
+  {
+    "path": "/case/19",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "includes": "B-09"
+    }
+  },
+  {
+    "path": "/exports/V31",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "hex": "646f63756d656e742c7265766973696f6e2c63616c6c2c76657373656c2c6c696e652c736572766963652c73746172742c656e642c616d6f756e742c73706c69740a53562d36332c322c422d31392c5345412d3430322c4d312ce68b96e8bdae2c32302c32322c3235302c0a"
+    }
+  },
+  {
+    "path": "/exports/V31",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "hex": "646f63756d656e742c7265766973696f6e2c63616c6c2c76657373656c2c6c696e652c736572766963652c73746172742c656e642c616d6f756e742c73706c69740a53562d31392c322c422d30392c5345412d3230312c4c312ce5b2b8e794b52c31382c32322c3432302c31382d32303a3232307c32302d32323a3230300a53562d31392c322c422d30392c5345412d3230312c4c322ce4be9be6b0b42c32312c32332c3135302c0a"
+    }
+  },
+  {
+    "path": "/west/north/2",
+    "stage": "corrected",
+    "method": "GET",
+    "status": 200,
+    "expected": {
+      "includes": "海星 更正"
+    }
+  }
+]

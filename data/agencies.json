@@ -1,0 +1,34 @@
+[
+  {
+    "project": "PR-6",
+    "agent": "M-26",
+    "area": "north",
+    "call": "B-08",
+    "from": 17,
+    "until": 20
+  },
+  {
+    "project": "PR-9",
+    "agent": "M-27",
+    "area": "north",
+    "call": "B-08",
+    "from": 20,
+    "until": 25
+  },
+  {
+    "project": "PR-3",
+    "agent": "M-61",
+    "area": "south",
+    "call": "B-19",
+    "from": 17,
+    "until": 26
+  },
+  {
+    "project": "PR-4",
+    "agent": "M-28",
+    "area": "north",
+    "call": "B-09",
+    "from": 19,
+    "until": 23
+  }
+]

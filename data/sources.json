@@ -1,0 +1,78 @@
+{
+  "stages": {
+    "initial": {
+      "GET /west": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>服务回执</h1><p>西湾港</p><p>本期批次 1</p><a href=\"/west/north\">北作业区</a><a href=\"/west/south\">南作业区</a></main></html>"
+      },
+      "GET /west/north": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>北作业区</h1><a href=\"/case/19\">海星</a><a href=\"/west/north/2\">续页</a></main></html>"
+      },
+      "GET /west/north/2": {
+        "status": 503,
+        "data": {
+          "message": "续页准备中"
+        }
+      },
+      "GET /west/south": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>南作业区</h1><a href=\"/case/63\">海星</a></main></html>"
+      },
+      "GET /case/19": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>服务原单 SV-19</h1><dl><dt>船舶识别号</dt><dd>SEA-201</dd><dt>靠泊批次</dt><dd>B-08</dd>\n<dt>内容修订</dt><dd>1</dd><dt>停靠时间</dt><dd>17 至 25</dd><dt>代理</dt><dd>M-26/M-27</dd></dl>\n<p>文件已生成</p><a href=\"/exports/V31\" download>领取原单</a><a href=\"/west\">回港区</a></main></html>"
+      },
+      "GET /case/63": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>服务原单 SV-63</h1><dl><dt>船舶识别号</dt><dd>SEA-402</dd><dt>靠泊批次</dt><dd>B-19</dd>\n<dt>内容修订</dt><dd>2</dd><dt>停靠时间</dt><dd>17 至 26</dd><dt>代理</dt><dd>M-61</dd></dl>\n<p>文件已生成</p><a href=\"/exports/V63\" download>领取原单</a><a href=\"/west\">回港区</a></main></html>"
+      },
+      "GET /exports/V31": {
+        "type": "application/octet-stream",
+        "headers": {
+          "Content-Disposition": "attachment; filename=\"SV-19-r1.csv\""
+        },
+        "base64": "ZG9jdW1lbnQscmV2aXNpb24sY2FsbCx2ZXNzZWwsbGluZSxzZXJ2aWNlLHN0YXJ0LGVuZCxhbW91bnQsc3BsaXQKU1YtMTksMSxCLTA4LFNFQS0yMDEsTDEs5bK455S1LDE4LDIyLDQ1MCwxOC0yMDoyMzB8MjAtMjI6MjIwClNWLTE5LDEsQi0wOCxTRUEtMjAxLEwyLOS+m+awtCwyMSwyMywxNjAsCg=="
+      },
+      "GET /exports/V63": {
+        "type": "application/octet-stream",
+        "headers": {
+          "Content-Disposition": "attachment; filename=\"SV-63-r2.csv\""
+        },
+        "base64": "ZG9jdW1lbnQscmV2aXNpb24sY2FsbCx2ZXNzZWwsbGluZSxzZXJ2aWNlLHN0YXJ0LGVuZCxhbW91bnQsc3BsaXQKU1YtNjMsMixCLTE5LFNFQS00MDIsTTEs5ouW6L2uLDIwLDIyLDI1MCwK"
+      }
+    },
+    "corrected": {
+      "GET /west": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>服务回执</h1><p>西湾港</p><p>本期批次 2</p><a href=\"/west/north\">北作业区</a><a href=\"/west/south\">南作业区</a></main></html>"
+      },
+      "GET /west/north/2": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>北作业区第2页</h1><a href=\"/case/19\">海星 更正</a></main></html>"
+      },
+      "GET /case/19": {
+        "type": "text/html; charset=utf-8",
+        "text": "<!doctype html><html lang=\"zh\"><meta charset=utf-8><main><h1>服务原单 SV-19</h1><dl><dt>船舶识别号</dt><dd>SEA-201</dd><dt>靠泊批次</dt><dd>B-09</dd>\n<dt>内容修订</dt><dd>2</dd><dt>停靠时间</dt><dd>17 至 25</dd><dt>代理</dt><dd>M-28</dd></dl>\n<p>文件已生成</p><a href=\"/exports/V31\" download>领取原单</a><a href=\"/west\">回港区</a></main></html>"
+      },
+      "GET /exports/V31": {
+        "sequence": [
+          {
+            "type": "application/octet-stream",
+            "headers": {
+              "Content-Disposition": "attachment; filename=\"SV-19-r2.csv\""
+            },
+            "base64": "ZG9jdW1lbnQscmV2aXNpb24sY2FsbCx2ZXNzZWwsbGluZSxzZXJ2aWNlLHN0YXJ0LGVuZCxhbW91bnQsc3BsaXQKU1YtNjMsMixCLTE5LFNFQS00MDIsTTEs5ouW6L2uLDIwLDIyLDI1MCwK"
+          },
+          {
+            "type": "application/octet-stream",
+            "headers": {
+              "Content-Disposition": "attachment; filename=\"SV-19-r2.csv\""
+            },
+            "base64": "ZG9jdW1lbnQscmV2aXNpb24sY2FsbCx2ZXNzZWwsbGluZSxzZXJ2aWNlLHN0YXJ0LGVuZCxhbW91bnQsc3BsaXQKU1YtMTksMixCLTA5LFNFQS0yMDEsTDEs5bK455S1LDE4LDIyLDQyMCwxOC0yMDoyMjB8MjAtMjI6MjAwClNWLTE5LDIsQi0wOSxTRUEtMjAxLEwyLOS+m+awtCwyMSwyMywxNTAsCg=="
+          }
+        ]
+      }
+    }
+  }
+}
