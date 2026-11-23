@@ -4,5 +4,6 @@ COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
 COPY sources ./sources
 COPY data ./data
+COPY src ./src
 COPY test ./test
 CMD ["npm", "test"]
